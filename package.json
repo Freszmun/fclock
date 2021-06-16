@@ -1,0 +1,17 @@
+{
+  "name": "fclock",
+  "version": "1.1.0",
+  "description": "Clock opened in web browser. Allows custom notifications, weather, etc. You can add anything you want.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateusz Bilicz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "socket.io": "^3.1.2"
+  }
+}

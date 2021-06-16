@@ -1,0 +1,90 @@
+* {
+    font-family: Roboto, Arial, serif;
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    font-size: .5cm;
+    color: rgba(255, 0, 0, .6);
+}
+#clock-main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 12em;
+    color: rgba(255, 0, 0, .8);
+}
+
+#weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: calc(100vw - 6em);
+    top: 0;
+    width: 6em;
+    height: 2.3em;
+    font-size: 2em;
+}
+#weather i {
+    padding-right: .4em;
+}
+
+#date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: calc(100vh - 2.5em);
+    width: 100vw;
+    height: 2.5em;
+    font-size: 1.6em;
+    letter-spacing: .4em;
+    font-weight: 100;
+}
+
+#notifications {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 50vw;
+    max-height: 100vh;
+    overflow: hidden auto;
+}
+
+.notification {
+    --r: 255;
+    --g: 0;
+    --b: 0;
+    display: block;
+    width: calc(100% - 2em);
+    margin: 1em;
+    padding: .7em;
+    background-color: rgba(0, 0, 0, .85);
+    color: rgba(var(--r), var(--g), var(--b), .6);
+    border-right: solid 1px rgba(var(--r), var(--g), var(--b), .9);
+}
+.notification i {
+    float: left;
+    width: 1em;
+    height: 100%;
+    font-size: 2em;
+    margin-right: .4em;
+}
+.notification p {
+    padding: 0;
+    margin: 0;
+}

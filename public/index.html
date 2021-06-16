@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>FClock</title>
+    <meta name='author' content='https://mateuszbilicz.pl/'>
+    <meta name='description' content='Simple clock web app'>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/225fd5f895.js" crossorigin="anonymous"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="clock-main">
+        <span id="time">hh:mm</span>
+    </div>
+    <div id="date"></div>
+    <div id="weather">
+        I T
+    </div>
+    <div id="notifications"></div>
+<script>
+    // TODO: change this to your own
+    const countryLocale = 'pl';
+
+    let notification_layout = document.getElementById('notifications'),
+        time_span = document.getElementById('time'),
+        date_span = document.getElementById('date');
+
+    // setting locale in moment
+    moment.locale(countryLocale);
+    // current time
+    window.time_interval = setInterval(function() {
+        time_span.innerHTML = moment().format('LT');
+        date_span.innerHTML = moment().format('DD.MM.YYYY');
+    },5000);//5 sec
+
+    getWeather();
+    window.weather_interval = setInterval(function() {
+        getWeather();
+    }, 300000)//5 min
+
+</script>
+</body>
+</html>
